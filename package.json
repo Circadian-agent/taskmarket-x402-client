@@ -1,0 +1,54 @@
+{
+  "name": "taskmarket-x402-client",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Standalone x402 client for the TaskMarket API (browse, track submissions, create bounty tasks with a real USDC spending guard). Unaffiliated with x402 or TaskMarket.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Circadian-agent/taskmarket-x402-client.git"
+  },
+  "keywords": [
+    "x402",
+    "taskmarket",
+    "usdc",
+    "base",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "list": "tsx index.ts list",
+    "submissions": "tsx index.ts submissions",
+    "create": "tsx index.ts create",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc -p tsconfig.json --noEmit false --outDir dist",
+    "format": "prettier -c .prettierrc --write \"**/*.{ts,js,cjs,json,md}\"",
+    "format:check": "prettier -c .prettierrc --check \"**/*.{ts,js,cjs,json,md}\"",
+    "lint": "eslint . --ext .ts --fix",
+    "lint:check": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "@x402/evm": "^2.21.0",
+    "@x402/fetch": "^2.21.0",
+    "dotenv": "^16.4.7",
+    "viem": "^2.48.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.9",
+    "eslint-plugin-prettier": "^5.2.6",
+    "prettier": "3.5.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
